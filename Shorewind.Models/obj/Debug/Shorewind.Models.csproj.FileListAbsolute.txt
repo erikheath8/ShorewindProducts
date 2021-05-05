@@ -1,0 +1,12 @@
+C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\Shorewind.Models\bin\Debug\Shorewind.Models.dll
+C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\Shorewind.Models\bin\Debug\Shorewind.Models.pdb
+C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\Shorewind.Models\obj\Debug\Shorewind.Models.csprojAssemblyReference.cache
+C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\Shorewind.Models\obj\Debug\Shorewind.Models.csproj.CoreCompileInputs.cache
+C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\Shorewind.Models\obj\Debug\Shorewind.Models.dll
+C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\Shorewind.Models\obj\Debug\Shorewind.Models.pdb
+C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\Shorewind.Models\bin\Debug\Shorewind.Models.dll.config
+C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\Shorewind.Models\bin\Debug\EntityFramework.dll
+C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\Shorewind.Models\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\Shorewind.Models\bin\Debug\EntityFramework.xml
+C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\Shorewind.Models\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\Shorewind.Models\obj\Debug\Shorewind.Models.csproj.CopyComplete

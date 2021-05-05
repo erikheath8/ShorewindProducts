@@ -10,9 +10,10 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
-using ShorewindProducts.WebMVC.Models;
+using Shorewind.Data;
+using Shorewind.WebMVC.Models;
 
-namespace ShorewindProducts.WebMVC
+namespace Shorewind.WebMVC
 {
     public class EmailService : IIdentityMessageService
     {
@@ -53,11 +54,11 @@ namespace ShorewindProducts.WebMVC
             // Configure validation logic for passwords
             manager.PasswordValidator = new PasswordValidator
             {
-                RequiredLength = 6,
-                RequireNonLetterOrDigit = true,
-                RequireDigit = true,
-                RequireLowercase = true,
-                RequireUppercase = true,
+                RequiredLength = 2,
+                RequireNonLetterOrDigit = false,
+                RequireDigit = false,
+                RequireLowercase = false,
+                RequireUppercase = false,
             };
 
             // Configure user lockout defaults

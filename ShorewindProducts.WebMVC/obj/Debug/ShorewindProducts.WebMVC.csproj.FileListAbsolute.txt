@@ -1,0 +1,2 @@
+C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\ShorewindProducts.WebMVC\obj\Debug\ShorewindProducts.WebMVC.csprojAssemblyReference.cache
+C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\ShorewindProducts.WebMVC\obj\Debug\ShorewindProducts.WebMVC.csproj.CoreCompileInputs.cache

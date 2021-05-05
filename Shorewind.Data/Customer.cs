@@ -18,6 +18,9 @@ namespace Shorewind.Data
         [Required, StringLength(32)]
         public string FirstName { get; set; }
 
+        [Required, StringLength(32)]
+        public string LastName { get; set; }
+
         [Required, StringLength(64)]
         public string Address { get; set; }
 

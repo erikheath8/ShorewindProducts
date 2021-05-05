@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -13,16 +14,25 @@ namespace Shorewind.Data
         [Key]
         public int OrderId { get; set; }
 
-        [Required, ForeignKey(nameof(CustomerId))]
+        /* Declared fields for shipping table
+        [Required, ForeignKey(nameof(ShipAddress))]
+        public int ShipAddressId { get; set; }
+
+        public virtual ShipAddress ShipAddressActual { get; set; }
+        */
+
+        [Required, ForeignKey(nameof(Customer))]
         public Guid CustomerId { get; set; }
 
-        [ForeignKey(nameof(EmployeeId))]
+        public virtual Customer Customer { get; set; }
+
+        [ForeignKey(nameof(Employee))]
         public int EmployeeId { get; set; }
+
+        public virtual Employee Employee { get; set; }
 
         public DateTimeOffset CreatedOrderDate { get; set; }
 
-        public virtual ShipAddress ShipAddress { get; set; }
-             
         public virtual List<OrderProduct> OrderProducts { get; set; }
 
         public double TotalCost { 
@@ -41,6 +51,7 @@ namespace Shorewind.Data
             } 
         }
 
-
+        [DefaultValue(false)]
+        public bool IsOrderShipped { get; set; }
     }
 }

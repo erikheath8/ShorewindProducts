@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace ShorewindProducts.WebMVC
+namespace Shorewind.WebMVC
 {
     public class BundleConfig
     {

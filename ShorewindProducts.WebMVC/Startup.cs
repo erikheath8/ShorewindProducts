@@ -1,8 +1,8 @@
 ﻿using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartupAttribute(typeof(ShorewindProducts.WebMVC.Startup))]
-namespace ShorewindProducts.WebMVC
+[assembly: OwinStartupAttribute(typeof(Shorewind.WebMVC.Startup))]
+namespace Shorewind.WebMVC
 {
     public partial class Startup
     {

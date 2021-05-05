@@ -22,6 +22,7 @@ namespace Shorewind.Data
         [Required, Range(1, 255)]
         public int StockQuantity { get; set; }
 
+        [Required]
         public double UnitPrice { get; set; }
 
     }

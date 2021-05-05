@@ -1,0 +1,6 @@
+C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\Shorewind.Services\bin\Debug\Shorewind.Services.dll
+C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\Shorewind.Services\bin\Debug\Shorewind.Services.pdb
+C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\Shorewind.Services\obj\Debug\Shorewind.Services.csprojAssemblyReference.cache
+C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\Shorewind.Services\obj\Debug\Shorewind.Services.csproj.CoreCompileInputs.cache
+C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\Shorewind.Services\obj\Debug\Shorewind.Services.dll
+C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\Shorewind.Services\obj\Debug\Shorewind.Services.pdb

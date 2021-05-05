@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
 
-namespace ShorewindProducts.WebMVC.Models
+namespace Shorewind.WebMVC.Models
 {
     public class IndexViewModel
     {

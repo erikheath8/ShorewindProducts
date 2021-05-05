@@ -8,9 +8,10 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using ShorewindProducts.WebMVC.Models;
+using Shorewind.Data;
+using Shorewind.WebMVC.Models;
 
-namespace ShorewindProducts.WebMVC.Controllers
+namespace Shorewind.WebMVC.Controllers
 {
     [Authorize]
     public class AccountController : Controller

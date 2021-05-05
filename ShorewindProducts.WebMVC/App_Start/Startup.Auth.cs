@@ -5,9 +5,10 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
-using ShorewindProducts.WebMVC.Models;
+using Shorewind.Data;
+using Shorewind.WebMVC.Models;
 
-namespace ShorewindProducts.WebMVC
+namespace Shorewind.WebMVC
 {
     public partial class Startup
     {

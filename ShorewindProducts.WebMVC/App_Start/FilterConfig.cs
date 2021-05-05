@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace ShorewindProducts.WebMVC
+namespace Shorewind.WebMVC
 {
     public class FilterConfig
     {

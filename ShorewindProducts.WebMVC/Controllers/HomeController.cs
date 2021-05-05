@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace ShorewindProducts.WebMVC.Controllers
+namespace Shorewind.WebMVC.Controllers
 {
     public class HomeController : Controller
     {
