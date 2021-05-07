@@ -5,32 +5,39 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Shorewind.Data
+namespace Shorewind.Models.ProductModels
 {
-    public class Product
+    public class ProductListItem
     {
-        [Key]
+        [Display(Name = "Product Id")]
         public int ProductId { get; set; }
 
-        [Required]
+
+        [Display(Name = "Product Name")]
         public string ProductName { get; set; }
 
+
+        [Display(Name = "Product Description")]
         public string ProductDescription { get; set; }
 
+
+        [Display(Name = "Category")]
         public int CategoryId { get; set; }
 
-        [Required, Range(1, 255)]
+
+        [Display(Name = "Quantity in Stock")]
         public int StockQuantity { get; set; }
 
-        [Required]
+
+        [Display(Name = "Product Price")]
         public double UnitPrice { get; set; }
 
-        /* Include for future added Column, migration on dbo
-        [Required]
+
+        [Display(Name = "Created")]
         public DateTimeOffset CreatedUtc { get; set; }
 
-        public DateTimeOffset? ModifiedUtc { get; set; }
-        */
 
+        [Display(Name = "Modified")]
+        public DateTimeOffset? ModifiedUtc { get; set; }
     }
 }

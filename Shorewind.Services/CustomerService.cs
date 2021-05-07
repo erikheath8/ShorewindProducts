@@ -1,4 +1,5 @@
 ﻿using Shorewind.Data;
+using Shorewind.Models.CustomerModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -90,7 +91,7 @@ namespace Shorewind.Services
                         State = entity.State,
                         PostalCode = entity.PostalCode,
                         PhoneNumber = entity.PhoneNumber,
-                        CreatedUtc = entity.CustomerId,
+                        CreatedUtc = entity.CreatedUtc,
                         ModifiedUtc = entity.ModifiedUtc
                     };
             }
@@ -116,7 +117,7 @@ namespace Shorewind.Services
                         State = entity.State,
                         PostalCode = entity.PostalCode,
                         PhoneNumber = entity.PhoneNumber,
-                        CreatedUtc = entity.CustomerId,
+                        CreatedUtc = entity.CreatedUtc,
                         ModifiedUtc = entity.ModifiedUtc
                     };
             }
@@ -140,7 +141,7 @@ namespace Shorewind.Services
                         entity.State = model.State;
                         entity.PostalCode = model.PostalCode;
                         entity.PhoneNumber = model.PhoneNumber;
-                        entity.CreatedUtc = model.CustomerId;
+                        entity.CreatedUtc = model.CreatedUtc;
                         entity.ModifiedUtc = model.ModifiedUtc;
 
                 return ctx.SaveChanges() == 1;

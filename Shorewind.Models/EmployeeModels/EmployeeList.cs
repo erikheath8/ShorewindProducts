@@ -5,23 +5,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Shorewind.Data
+namespace Shorewind.Models.EmployeeModels
 {
-    public class Employee
+    public class EmployeeList
     {
-        [Key]
         public int EmployeeId { get; set; }
 
-        [Required, StringLength(32)]
         public string FirstName { get; set; }
 
-        [Required, StringLength(32)]
         public string LastName { get; set; }
 
-        /* To be added in migration
-        [Required]
+        [Display(Name = "Created")]
         public DateTimeOffset CreatedUtc { get; set; }
+
+        [Display(Name = "Modified")]
         public DateTimeOffset? ModifiedUtc { get; set; }
-        */
+
     }
 }

@@ -51,14 +51,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ProductModels\ProductModel.cs" />
+    <Compile Include="CustomerModels\CustomerDetail.cs" />
+    <Compile Include="CustomerModels\CustomerCreate.cs" />
+    <Compile Include="CustomerModels\CustomerEdit.cs" />
+    <Compile Include="CustomerModels\CustomerList.cs" />
+    <Compile Include="EmployeeModels\EmployeeCreate.cs" />
+    <Compile Include="EmployeeModels\EmployeeDetail.cs" />
+    <Compile Include="EmployeeModels\EmployeeEdit.cs" />
+    <Compile Include="EmployeeModels\EmployeeList.cs" />
+    <Compile Include="OrderModels\OrderCreate.cs" />
+    <Compile Include="OrderModels\OrderDetail.cs" />
+    <Compile Include="OrderModels\OrderEdit.cs" />
+    <Compile Include="OrderModels\OrderList.cs" />
+    <Compile Include="OrderProductModels\OrderProductCreate.cs" />
+    <Compile Include="OrderProductModels\OrderProductDetail.cs" />
+    <Compile Include="OrderProductModels\OrderProductEdit.cs" />
+    <Compile Include="OrderProductModels\OrderProductList.cs" />
+    <Compile Include="ProductModels\ProductCreate.cs" />
+    <Compile Include="ProductModels\ProductDetail.cs" />
+    <Compile Include="ProductModels\ProductEdit.cs" />
+    <Compile Include="ProductModels\ProductListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="CustomerModels\" />
-    <Folder Include="EmployeeModels\" />
-    <Folder Include="OrderProductModels\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />

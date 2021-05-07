@@ -33,8 +33,9 @@ namespace Shorewind.Data
 
         public DateTimeOffset CreatedOrderDate { get; set; }
 
-        public virtual List<OrderProduct> OrderProducts { get; set; }
+        public virtual List<OrderProduct> OrderProducts { get; set; } = new List<OrderProduct>();
 
+        [NotMapped]
         public double TotalCost { 
             
             get {

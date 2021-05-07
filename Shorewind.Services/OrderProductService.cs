@@ -1,4 +1,5 @@
 ﻿using Shorewind.Data;
+using Shorewind.Models.OrderProductModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -57,21 +58,19 @@ namespace Shorewind.Services
             }
         }
 
-        public IEnumerable<OrderProductListItem> GetOrderProducts()
+        public IEnumerable<OrderProductList> GetOrderProducts()
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var query =
                     ctx
-                    .OrderProduct
+                    .OrderProducts
                     .Select(
                         e =>
-                        new OrderProductListItem
+                        new OrderProductList
                         {
                             OrderProductId = e.OrderProductId,
                             OrderId = e.OrderId,
-                            CustomerFirstName = e.Order.Customer.FirstName,
-                            CustomerLastName = e.Order.Customer.LastName,
                             ProductId = e.ProductId,
                             ProductName = e.Product.ProductName,
                             ProductCount = e.ProductCount,
@@ -87,14 +86,12 @@ namespace Shorewind.Services
             {
                 var entity =
                     ctx
-                    .OrderProduct
-                    .Single(e => e.PrimaryId == id);
+                    .OrderProducts
+                    .Single(e => e.OrderProductId == id);
                 return
                 new OrderProductDetail
                 {
                     OrderId = entity.OrderId,
-                    CustomerId = entity.OrderId,
-                    CustomerFirstName = entity.Order.Customer.FirstName,
                     ProductId = entity.ProductId,
                     ProductCount = entity.ProductCount,
                     ProductName = entity.Product.ProductName
@@ -109,9 +106,9 @@ namespace Shorewind.Services
 
                 OrderProduct originalOrderProduct = ctx.OrderProducts.Find(id);
 
-                if (originalOrderProduct.Order.OrderFinalized)
+                if (originalOrderProduct.Order.IsOrderShipped)
                 {
-                    return "This order has been finalized. You cannot make updates to it.";
+                    return "This order has been Shipped. You cannot make updates to it.";
                 }
 
                 Product originalProduct =
@@ -163,21 +160,21 @@ namespace Shorewind.Services
             }
         }
 
-        public bool DeleteOrderProduct(int oPID)
+        public bool DeleteOrderProduct(int orderProductId)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
                     .OrderProducts
-                    .Single(e => e.PrimaryId == oPID);
+                    .Single(e => e.OrderProductId == orderProductId);
 
                 var product =
                     ctx
                     .Products
                     .Single(p => p.ProductId == entity.ProductId);
 
-                product.UnitCount += entity.ProductCount; //return orderProduct to product inventory
+                product.StockQuantity += entity.ProductCount; //return orderProduct to product inventory
 
                 ctx.OrderProducts.Remove(entity);
 

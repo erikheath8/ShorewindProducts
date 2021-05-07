@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Shorewind.Models.ProductModels
 {
-    public class ProductModel
+    public class ProductCreate
     {
         [Required]
         [Display(Name = "Product Id")]
@@ -37,6 +37,11 @@ namespace Shorewind.Models.ProductModels
         [Display(Name = "Product Price")]
         [Range(0, int.MaxValue, ErrorMessage = "The Unit Price must be greater than 0.")]
         public double UnitPrice { get; set; }
-      
+
+        /*
+        [Required]
+        
+        public DateTimeOffset CreatedUtc { get; set; }
+        */
     }
 }
