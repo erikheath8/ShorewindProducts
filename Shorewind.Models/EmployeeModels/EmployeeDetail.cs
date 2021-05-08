@@ -14,7 +14,11 @@ namespace Shorewind.Models.EmployeeModels
 
         public string LastName { get; set; }
 
-        /* Add after DBO migration    
+        /* Add after DBO migration 
+         * 
+         * [Required, EmailAddress]
+            public string Email { get; set; }
+
         [Display(Name = "Created")]
         public DateTimeOffset CreatedUtc { get; set; }
 

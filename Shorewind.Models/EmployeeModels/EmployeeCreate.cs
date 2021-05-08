@@ -23,6 +23,10 @@ namespace Shorewind.Models.EmployeeModels
         public string LastName { get; set; }
 
         /* Uncomment after migration
+         * 
+         * [Required, EmailAddress]
+            public string Email { get; set; }
+         * 
         public DateTimeOffset CreatedUtc { get; set; }
         */
     }

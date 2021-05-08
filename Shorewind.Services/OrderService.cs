@@ -18,14 +18,13 @@ namespace Shorewind.Services
             _userId = userId;
         }
 
-        public string CreateOrder()//no input needed, all info is given already to create the foundation of an order
+        public string CreateOrder()
         {
             var entity =
                 new Order()
                 {
                     CustomerId = _userId,
                     CreatedOrderDate = DateTime.Now,
-                    IsOrderShipped = false,
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -34,25 +33,25 @@ namespace Shorewind.Services
 
                 ctx.SaveChanges();
 
-                return $"The Order ID: {entity.OrderId} has been created."; //when bool, ctx.savechanges == 1
+                return $"The Order ID: {entity.OrderId} has been created."; 
             }
         }
 
-        public IEnumerable<OrderList> GetOrders() //For customer that is logged in
+        public IEnumerable<OrderList> GetOrders() 
         {
 
             using (var ctx = new ApplicationDbContext())
             {
-                var query =
+                var orders =
                     ctx
                     .Orders
                     .Where(e => e.CustomerId == _userId).ToList();
 
                 List<OrderList> newList = new List<OrderList>();
 
-                foreach (var q in query)
+                foreach (var q in orders)
                 {
-                    var oLI = new OrderList
+                    var ordersList = new OrderList
                     {
                         OrderId = q.OrderId,
                         CustomerId = q.CustomerId,
@@ -60,14 +59,13 @@ namespace Shorewind.Services
                         CreatedOrderDate = q.CreatedOrderDate,
                         IsOrderShipped = q.IsOrderShipped
                     };
-                    newList.Add(oLI);
+                    newList.Add(ordersList);
                 }
-
                 return newList;
             }
         }
 
-        public OrderList GetMostRecentOrder() //For customer that is logged in
+        public OrderList GetMostRecentOrder() 
         {
 
             using (var ctx = new ApplicationDbContext())
@@ -101,17 +99,25 @@ namespace Shorewind.Services
                 .Orders
                 .Single(e => e.OrderId == id);
 
-                return
-                    new OrderDetail
+                return new OrderDetail
                     {
                         OrderId = entity.OrderId,
                         CustomerId = entity.CustomerId,
-                        CustomerFirstName = entity.Customer.FirstName,
-                        OrderProducts = ListItemConverter(entity.OrderProducts),
+                        Customer = entity.Customer,
+                        Employee = entity.Employee,
                         CreatedOrderDate = entity.CreatedOrderDate,
-                        IsOrderShipped = entity.IsOrderShipped
-                    };
+                        IsOrderShipped = entity.IsOrderShipped,
+                        OrderProducts = entity.OrderProducts.Select(e => new OrderProductList()
+                        {
+                            OrderProductId = e.Product.ProductId,
+                            ProductId = e.Product.ProductId,
+                            ProductName = e.Product.ProductName,
+                            ProductCount = e.ProductCount,
+                            UnitPrice = e.Product.UnitPrice
 
+                        }).ToList()
+                       
+                    };
             }
         }
 
@@ -160,8 +166,8 @@ namespace Shorewind.Services
                 return ctx.SaveChanges() >= 1;
             }
         }
-
        
+        // Helper casting method
         public List<OrderProductList> ListItemConverter(List<OrderProduct> orderProducts)
         {
             List<OrderProductList> newList = new List<OrderProductList>();
@@ -169,18 +175,17 @@ namespace Shorewind.Services
             {
                 var listItem = new OrderProductList
                 {
-                    OrderId = op.OrderId,
+                    //OrderId = op.OrderId,
                     OrderProductId = op.OrderProductId,
                     ProductId = op.ProductId,
-                    ProductCount = op.ProductCount,
                     ProductName = op.Product.ProductName,
+                    ProductCount = op.ProductCount,
                     UnitPrice = op.Product.UnitPrice,
                 };
                 newList.Add(listItem);
             }
             return newList;
         }
-
 
     }
 }

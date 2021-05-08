@@ -13,7 +13,7 @@ namespace ShorewindProducts.WebMVC.Controllers
         public ActionResult Index()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
-            var service = new 
+            //var service = new 
 
             return View();
         }

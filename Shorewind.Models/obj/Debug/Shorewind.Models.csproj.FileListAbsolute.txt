@@ -10,3 +10,10 @@ C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProdu
 C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\Shorewind.Models\bin\Debug\EntityFramework.xml
 C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\Shorewind.Models\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\Shorewind.Models\obj\Debug\Shorewind.Models.csproj.CopyComplete
+C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\Shorewind.Models\bin\Debug\Shorewind.Data.dll
+C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\Shorewind.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\Shorewind.Models\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\Shorewind.Models\bin\Debug\Shorewind.Data.pdb
+C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\Shorewind.Models\bin\Debug\Shorewind.Data.dll.config
+C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\Shorewind.Models\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\Shorewind.Models\bin\Debug\Microsoft.AspNet.Identity.Core.xml

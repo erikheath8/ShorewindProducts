@@ -31,6 +31,7 @@ namespace Shorewind.Data
 
         public virtual Employee Employee { get; set; }
 
+        [Required]
         public DateTimeOffset CreatedOrderDate { get; set; }
 
         public virtual List<OrderProduct> OrderProducts { get; set; } = new List<OrderProduct>();

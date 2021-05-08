@@ -25,5 +25,8 @@ namespace Shorewind.Data
         [Required, Range(1, Int32.MaxValue)]
         public int ProductCount { get; set; }
 
+        // Add orderdate time with migration
+
+
     }
 }

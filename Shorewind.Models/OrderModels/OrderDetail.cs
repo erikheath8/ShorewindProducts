@@ -1,4 +1,5 @@
-﻿using Shorewind.Models.OrderProductModels;
+﻿using Shorewind.Data;
+using Shorewind.Models.OrderProductModels;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -14,7 +15,9 @@ namespace Shorewind.Models.OrderModels
 
         public Guid CustomerId { get; set; }
 
-        public string CustomerFirstName { get; set; }
+        public Customer Customer { get; set; }
+
+        public Employee Employee { get; set; }
 
         public List<OrderProductList> OrderProducts = new List<OrderProductList>();
 

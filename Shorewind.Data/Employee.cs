@@ -19,8 +19,13 @@ namespace Shorewind.Data
         public string LastName { get; set; }
 
         /* To be added in migration
+         * 
+         * [Required, EmailAddress]
+           public string Email { get; set; }
+         * 
         [Required]
         public DateTimeOffset CreatedUtc { get; set; }
+
         public DateTimeOffset? ModifiedUtc { get; set; }
         */
     }

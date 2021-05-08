@@ -70,7 +70,7 @@ namespace Shorewind.Services
                         new OrderProductList
                         {
                             OrderProductId = e.OrderProductId,
-                            OrderId = e.OrderId,
+                            //OrderId = e.OrderId,
                             ProductId = e.ProductId,
                             ProductName = e.Product.ProductName,
                             ProductCount = e.ProductCount,
@@ -108,7 +108,7 @@ namespace Shorewind.Services
 
                 if (originalOrderProduct.Order.IsOrderShipped)
                 {
-                    return "This order has been Shipped. You cannot make updates to it.";
+                    return "This order has been Shipped and changes cannot be made.";
                 }
 
                 Product originalProduct =
@@ -123,17 +123,19 @@ namespace Shorewind.Services
 
                 if (originalOrderProduct.ProductId == updatedOrderProduct.ProductId)
                 {
-                    //check if enough original product is in inventory (current inventory + whatever was in the original order)
-                    if (updatedOrderProduct.ProductCount >= originalProduct.UnitCount + originalOrderProduct.ProductCount)
-                        return $"There is not enough inventory of {originalProduct.ProductName} available to update to this" +
-                            $" OrderProduct's ProductCount. The current inventory (including the ProductCount on the original OrderProduct)" +
-                            $" is {originalProduct.UnitCount + originalOrderProduct.ProductCount} units.";
+                    // verfies quantity of original product is in inventory for order (current inventory + original order)
+                    if (updatedOrderProduct.ProductCount > originalProduct.StockQuantity + originalOrderProduct.ProductCount)
+                    {
+                        return $"There is insufficient inventory of {originalProduct.ProductName} to perform action." +
+                            $"Current inventory is {originalProduct.StockQuantity + originalOrderProduct.ProductCount} units.";
+                    }
 
-                    originalProduct.UnitCount += originalOrderProduct.ProductCount; //return original request to inventory
-                    originalProduct.UnitCount -= updatedOrderProduct.ProductCount; //remove current request from inventory
-
-                    originalOrderProduct.OrderId = updatedOrderProduct.OrderId;
-                    originalOrderProduct.ProductId = updatedOrderProduct.ProductId;
+                    // assigns product inventory to the correct level
+                    //originalProduct.StockQuantity += originalOrderProduct.ProductCount; 
+                    //originalProduct.StockQuantity -= updatedOrderProduct.ProductCount;
+                    originalProduct.StockQuantity += (originalOrderProduct.ProductCount - updatedOrderProduct.ProductCount);
+                    //originalOrderProduct.OrderId = updatedOrderProduct.OrderId;
+                    //originalOrderProduct.ProductId = updatedOrderProduct.ProductId;
                     originalOrderProduct.ProductCount = updatedOrderProduct.ProductCount;
 
                     ctx.SaveChanges();
@@ -143,19 +145,8 @@ namespace Shorewind.Services
 
                 else //if original orderproduct product is different from updated orderproduct product
                 {
-                    if (updatedOrderProduct.ProductCount >= updatedProduct.UnitCount)
-                        return $"There is not enough inventory of the updated product: {updatedProduct.ProductName} available to update this OrderProduct's Product and ProductCount. The current {updatedProduct.ProductName} inventory is {updatedProduct.UnitCount} units."; //check if enough updated product is in inventory
 
-                    originalProduct.UnitCount += originalOrderProduct.ProductCount; //return the original orderproduct to inventory (like you didn't mean to add to order)
-                    updatedProduct.UnitCount -= updatedOrderProduct.ProductCount; //Subtract new orderproduct request from new product's inventory
-
-                    originalOrderProduct.OrderId = updatedOrderProduct.OrderId;
-                    originalOrderProduct.ProductId = updatedOrderProduct.ProductId;
-                    originalOrderProduct.ProductCount = updatedOrderProduct.ProductCount;
-
-                    ctx.SaveChanges();
-
-                    return $"The OrderProduct ID: {id} has been updated with the updated product: {updatedProduct.ProductName}.";
+                    return $"Error: The OrderProduct ID: {id} does not match the {updatedOrderProduct.ProductId} ";
                 }
             }
         }
@@ -174,15 +165,13 @@ namespace Shorewind.Services
                     .Products
                     .Single(p => p.ProductId == entity.ProductId);
 
-                product.StockQuantity += entity.ProductCount; //return orderProduct to product inventory
-
+                //return orderProduct to product inventory
+                product.StockQuantity += entity.ProductCount;
                 ctx.OrderProducts.Remove(entity);
 
                 return ctx.SaveChanges() == 2;
             }
         }
-
-
 
     }
 }

@@ -73,7 +73,12 @@
     <Compile Include="ProductModels\ProductListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Shorewind.Data\Shorewind.Data.csproj">
+      <Project>{A51838BF-C062-4D2C-9B8C-4EC5DE5DD494}</Project>
+      <Name>Shorewind.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
