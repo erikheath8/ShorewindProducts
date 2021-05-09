@@ -10,13 +10,6 @@ namespace Shorewind.Services
 {
     public class OrderProductService
     {
-        private readonly Guid _userId;
-
-        public OrderProductService(Guid userId)
-        {
-            _userId = userId;
-        }
-
         public string CreateOrderProduct(OrderProductCreate model)
         {
             using (var ctx = new ApplicationDbContext())

@@ -43,7 +43,7 @@ namespace Shorewind.Models.CustomerModels
         [Required, StringLength(5, ErrorMessage = "Please enter 5 numbers for the ZIPCODE.")]
         public string PostalCode { get; set; }
 
-        [Phone]
+        [Phone(ErrorMessage = "Invalid Phone Number")]
         public string PhoneNumber { get; set; }
 
         [Display(Name = "Created")]

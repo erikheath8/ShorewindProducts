@@ -17,12 +17,10 @@ namespace Shorewind.Services
                 new Employee()
                 {
                     EmployeeId = model.EmployeeId,
-                    //Future migration
-                    //EmployeeEmail = model.Email,
+                    Email = model.Email,
                     FirstName = model.FirstName,
                     LastName = model.LastName,
-                    //Future migration
-                    //CreatedUtc = DateTimeOffset.Now,
+                    CreatedUtc = DateTimeOffset.Now,
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -45,12 +43,10 @@ namespace Shorewind.Services
                                 new EmployeeList
                                 {
                                     EmployeeId = e.EmployeeId,
-                                    //Future migration
-                                    //EmployeeEmail = model.Email,
+                                    Email = e.Email,
                                     FirstName = e.FirstName,
                                     LastName = e.LastName,
-                                    //Future migration
-                                    //CreatedUtc = DateTimeOffset.Now,
+                                    CreatedUtc = DateTimeOffset.Now,
                                 });
 
                 return query.ToArray();
@@ -69,12 +65,10 @@ namespace Shorewind.Services
                     new EmployeeDetail
                     {
                         EmployeeId = entity.EmployeeId,
-                        //Future migration
-                        //EmployeeEmail = model.Email,
+                        Email = entity.Email,
                         FirstName = entity.FirstName,
                         LastName = entity.LastName,
-                        //Future migration
-                        //CreatedUtc = DateTimeOffset.Now,
+                        CreatedUtc = DateTimeOffset.Now,
                     };
             }
         }
@@ -91,12 +85,10 @@ namespace Shorewind.Services
                 return new EmployeeDetail
                 {
                     EmployeeId = entity.EmployeeId,
-                    //Future migration
-                    //EmployeeEmail = model.Email,
+                    Email = entity.Email,
                     FirstName = entity.FirstName,
-                    LastName = entity.LastName
-                    //Future migration
-                    //CreatedUtc = DateTimeOffset.Now,
+                    LastName = entity.LastName,
+                    CreatedUtc = DateTimeOffset.Now,
                 };
             }
 
@@ -114,11 +106,9 @@ namespace Shorewind.Services
                 entity.EmployeeId = model.EmployeeId;
                 entity.FirstName = model.FirstName;
                 entity.LastName = model.LastName;
-                //Uncomment after migration
-                //entity.Email = model.Email;
-                //Uncomment after migration
-                //entity.CreatedUtc = model.CreatedUtc;
-                //entity.ModifiedUtc = model.ModifiedUtc;
+                entity.Email = model.Email;
+                entity.CreatedUtc = model.CreatedUtc;
+                entity.ModifiedUtc = model.ModifiedUtc;
 
                 return ctx.SaveChanges() == 1;
             }

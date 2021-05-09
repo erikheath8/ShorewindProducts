@@ -17,3 +17,7 @@ C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProdu
 C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\Shorewind.Data\obj\Debug\Shorewind.Data.Migrations.InitialCreate.resources
 C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\Shorewind.Data\obj\Debug\Shorewind.Data.csproj.GenerateResource.cache
 C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\Shorewind.Data\obj\Debug\Shorewind.Data.Migrations.InitialMigration.resources
+C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\Shorewind.Data\obj\Debug\Shorewind.Data.Migrations.AddLastNameToCustomer.resources
+C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\Shorewind.Data\obj\Debug\Shorewind.Data.Migrations.AddEmailAddressToEmployee.resources
+C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\Shorewind.Data\obj\Debug\Shorewind.Data.Migrations.AddCreatedUtcToEmployee.resources
+C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\Shorewind.Data\obj\Debug\Shorewind.Data.Migrations.AddModifiedUtcToEmployee.resources

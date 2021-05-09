@@ -114,3 +114,4 @@ C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProdu
 C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\ShorewindProducts.WebMVC\obj\Debug\Shorewind.WebMVC.csproj.CopyComplete
 C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\ShorewindProducts.WebMVC\obj\Debug\ShorewindProducts.WebMVC.dll
 C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\ShorewindProducts.WebMVC\obj\Debug\ShorewindProducts.WebMVC.pdb
+C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\ShorewindProducts.WebMVC\bin\Shorewind.Services.dll.config

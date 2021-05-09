@@ -15,8 +15,6 @@ namespace Shorewind.Models.EmployeeModels
 
         public string LastName { get; set; }
 
-        /*
-
         [Required, EmailAddress]
         public string Email { get; set; }
 
@@ -25,8 +23,6 @@ namespace Shorewind.Models.EmployeeModels
 
         [Display(Name = "Modified")]
         public DateTimeOffset? ModifiedUtc { get; set; }
-
-        */
 
     }
 }

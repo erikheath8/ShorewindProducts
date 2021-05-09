@@ -12,7 +12,7 @@ namespace Shorewind.Models.CustomerModels
         [Required]
         public Guid CustomerId { get; set; }
 
-        [Required, EmailAddress]
+        [Required, EmailAddress(ErrorMessage = "Invalid Email Address")]
         public string Email { get; set; }
 
         [Required]
@@ -43,7 +43,7 @@ namespace Shorewind.Models.CustomerModels
         [Required, StringLength(5, ErrorMessage = "Please enter 5 numbers for the ZIPCODE.")]
         public string PostalCode { get; set; }
 
-        [Phone]
+        [Phone(ErrorMessage = "Invalid Phone Number")]
         public string PhoneNumber { get; set; }
 
         public DateTimeOffset CreatedUtc { get; set; }

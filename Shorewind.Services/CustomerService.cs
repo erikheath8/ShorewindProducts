@@ -24,7 +24,7 @@ namespace Shorewind.Services
                     CustomerId = _userId,
 		            Email = model.Email,
 		            FirstName = model.FirstName,
-                    //LastName = model.LastName,
+                    LastName = model.LastName,
 		            Address= model.Address,
 		            City = model.City,
 		            State = model.State,
@@ -56,7 +56,7 @@ namespace Shorewind.Services
                                     CustomerId = e.CustomerId,
                                     Email = e.Email,
                                     FirstName = e.FirstName,
-                                    //LastName = e.LastName,
+                                    LastName = e.LastName,
                                     Address = e.Address,
                                     City = e.City,
                                     State = e.State,
@@ -85,7 +85,7 @@ namespace Shorewind.Services
                         CustomerId = entity.CustomerId,
                         Email = entity.Email,
                         FirstName = entity.FirstName,
-                        //LastName = entity.LastName,
+                        LastName = entity.LastName,
                         Address = entity.Address,
                         City = entity.City,
                         State = entity.State,
@@ -111,7 +111,7 @@ namespace Shorewind.Services
                         CustomerId = entity.CustomerId,
                         Email = entity.Email,
                         FirstName = entity.FirstName,
-                        //LastName = entity.LastName,
+                        LastName = entity.LastName,
                         Address = entity.Address,
                         City = entity.City,
                         State = entity.State,
@@ -135,7 +135,7 @@ namespace Shorewind.Services
                         entity.CustomerId = model.CustomerId;
                         entity.Email = model.Email;
                         entity.FirstName = model.FirstName;
-                        //entity.LastName = model.LastName;
+                        entity.LastName = model.LastName;
                         entity.Address = model.Address;
                         entity.City = model.City;
                         entity.State = model.State;

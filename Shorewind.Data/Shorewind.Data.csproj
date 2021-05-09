@@ -69,6 +69,22 @@
     <Compile Include="Migrations\202105041836327_InitialMigration.designer.cs">
       <DependentUpon>202105041836327_InitialMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105082329110_AddLastNameToCustomer.cs" />
+    <Compile Include="Migrations\202105082329110_AddLastNameToCustomer.designer.cs">
+      <DependentUpon>202105082329110_AddLastNameToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105082346095_AddEmailAddressToEmployee.cs" />
+    <Compile Include="Migrations\202105082346095_AddEmailAddressToEmployee.designer.cs">
+      <DependentUpon>202105082346095_AddEmailAddressToEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105082359104_AddCreatedUtcToEmployee.cs" />
+    <Compile Include="Migrations\202105082359104_AddCreatedUtcToEmployee.designer.cs">
+      <DependentUpon>202105082359104_AddCreatedUtcToEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105090001284_AddModifiedUtcToEmployee.cs" />
+    <Compile Include="Migrations\202105090001284_AddModifiedUtcToEmployee.designer.cs">
+      <DependentUpon>202105090001284_AddModifiedUtcToEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="OrderProduct.cs" />
@@ -85,6 +101,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105041836327_InitialMigration.resx">
       <DependentUpon>202105041836327_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105082329110_AddLastNameToCustomer.resx">
+      <DependentUpon>202105082329110_AddLastNameToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105082346095_AddEmailAddressToEmployee.resx">
+      <DependentUpon>202105082346095_AddEmailAddressToEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105082359104_AddCreatedUtcToEmployee.resx">
+      <DependentUpon>202105082359104_AddCreatedUtcToEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105090001284_AddModifiedUtcToEmployee.resx">
+      <DependentUpon>202105090001284_AddModifiedUtcToEmployee.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

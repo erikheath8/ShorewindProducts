@@ -22,12 +22,10 @@ namespace Shorewind.Models.EmployeeModels
         [MaxLength(32, ErrorMessage = "Please enter less than 32 characters.")]
         public string LastName { get; set; }
 
-        /* Uncomment after migration
-         * 
-         * [Required, EmailAddress]
-            public string Email { get; set; }
-         * 
+        [Required, EmailAddress]
+        public string Email { get; set; }
+         
         public DateTimeOffset CreatedUtc { get; set; }
-        */
+        
     }
 }

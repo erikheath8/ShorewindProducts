@@ -18,14 +18,11 @@ namespace Shorewind.Data
         [Required, StringLength(32)]
         public string FirstName { get; set; }
 
-        /* 
         [Required, StringLength(32)]
         public string LastName { get; set; }
-        */
 
         [Required, StringLength(64)]
         public string Address { get; set; }
-        
 
         [Required, StringLength(64)]
         public string City { get; set; }
@@ -38,7 +35,9 @@ namespace Shorewind.Data
 
         [Phone]
         public string PhoneNumber { get; set; }
+
         public DateTimeOffset CreatedUtc { get; set; }
+
         public DateTimeOffset? ModifiedUtc { get; set; }
     }
 }
