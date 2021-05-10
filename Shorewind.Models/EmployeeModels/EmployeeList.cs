@@ -15,7 +15,7 @@ namespace Shorewind.Models.EmployeeModels
 
         public string LastName { get; set; }
 
-        [Required, EmailAddress]
+        [EmailAddress]
         public string Email { get; set; }
 
         [Display(Name = "Created")]

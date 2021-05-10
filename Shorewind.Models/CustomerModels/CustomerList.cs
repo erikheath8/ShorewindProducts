@@ -9,7 +9,7 @@ namespace Shorewind.Models.CustomerModels
 {
     public class CustomerList
     {
-        public Guid CustomerId { get; set; }
+        public int CustomerId { get; set; }
 
         public string Email { get; set; }
 

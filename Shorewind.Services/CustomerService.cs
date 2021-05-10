@@ -21,7 +21,6 @@ namespace Shorewind.Services
             var entity =
                 new Customer()
                 {
-                    CustomerId = _userId,
 		            Email = model.Email,
 		            FirstName = model.FirstName,
                     LastName = model.LastName,
@@ -31,7 +30,6 @@ namespace Shorewind.Services
 		            PostalCode = model.PostalCode,
 		            PhoneNumber = model.PhoneNumber,
                     CreatedUtc = DateTimeOffset.Now,
-                    ModifiedUtc = DateTimeOffset.Now
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -62,16 +60,15 @@ namespace Shorewind.Services
                                     State = e.State,
                                     PostalCode = e.PostalCode,
                                     PhoneNumber = e.PhoneNumber,
-                                    CreatedUtc = DateTimeOffset.Now,
-                                    ModifiedUtc = DateTimeOffset.Now
-
+                                    CreatedUtc = e.CreatedUtc,
+                                    ModifiedUtc = e.ModifiedUtc
                                 });
 
                 return query.ToArray();
             }
         }
 
-        public CustomerDetail GetCustomerById(Guid id)
+        public CustomerDetail GetCustomerById(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
@@ -97,14 +94,14 @@ namespace Shorewind.Services
             }
         }
 
-        public CustomerDetail GetCustomer()
+        public CustomerDetail GetCustomer(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
                         .Customers
-                        .Single(e => e.CustomerId == _userId);
+                        .Single(e => e.CustomerId == id);
                 return
                     new CustomerDetail
                     {
@@ -130,9 +127,8 @@ namespace Shorewind.Services
                 var entity =
                     ctx
                         .Customers
-                        .Single(e => e.CustomerId == _userId);
+                        .Single(e => e.CustomerId == model.CustomerId);
 
-                        entity.CustomerId = model.CustomerId;
                         entity.Email = model.Email;
                         entity.FirstName = model.FirstName;
                         entity.LastName = model.LastName;
@@ -141,14 +137,13 @@ namespace Shorewind.Services
                         entity.State = model.State;
                         entity.PostalCode = model.PostalCode;
                         entity.PhoneNumber = model.PhoneNumber;
-                        entity.CreatedUtc = model.CreatedUtc;
                         entity.ModifiedUtc = model.ModifiedUtc;
 
                 return ctx.SaveChanges() == 1;
             }
         }
 
-        public bool DeleteCustomer(Guid customerId)
+        public bool DeleteCustomer(int customerId)
         {
             using (var ctx = new ApplicationDbContext())
             {

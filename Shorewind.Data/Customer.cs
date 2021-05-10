@@ -10,7 +10,7 @@ namespace Shorewind.Data
     public class Customer
     {
         [Key]
-        public Guid CustomerId { get; set; }
+        public int CustomerId { get; set; }
 
         [Required, EmailAddress]
         public string Email { get; set; }

@@ -11,19 +11,12 @@ namespace Shorewind.Services
 {
     public class OrderService
     {
-        private readonly Guid _userId;
-
-        public OrderService(Guid userId)
-        {
-            _userId = userId;
-        }
-
-        public string CreateOrder()
+        public string CreateOrder(int customerId)
         {
             var entity =
                 new Order()
                 {
-                    CustomerId = _userId,
+                    CustomerId = customerId,
                     CreatedOrderDate = DateTime.Now,
                 };
 
@@ -37,7 +30,7 @@ namespace Shorewind.Services
             }
         }
 
-        public IEnumerable<OrderList> GetOrders() 
+        public IEnumerable<OrderList> GetOrders(int customerId) 
         {
 
             using (var ctx = new ApplicationDbContext())
@@ -45,7 +38,7 @@ namespace Shorewind.Services
                 var orders =
                     ctx
                     .Orders
-                    .Where(e => e.CustomerId == _userId).ToList();
+                    .Where(e => e.CustomerId == customerId).ToList();
 
                 List<OrderList> newList = new List<OrderList>();
 
@@ -65,7 +58,7 @@ namespace Shorewind.Services
             }
         }
 
-        public OrderList GetMostRecentOrder() 
+        public OrderList GetMostRecentOrder(int customerId) 
         {
 
             using (var ctx = new ApplicationDbContext())
@@ -73,7 +66,7 @@ namespace Shorewind.Services
                 var entity =
                     ctx
                     .Orders
-                    .Where(e => e.CustomerId == _userId)
+                    .Where(e => e.CustomerId == customerId)
                     .OrderByDescending(e => e.CreatedOrderDate)
                     .First();
 
@@ -175,7 +168,6 @@ namespace Shorewind.Services
             {
                 var listItem = new OrderProductList
                 {
-                    //OrderId = op.OrderId,
                     OrderProductId = op.OrderProductId,
                     ProductId = op.ProductId,
                     ProductName = op.Product.ProductName,

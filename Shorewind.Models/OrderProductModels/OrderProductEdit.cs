@@ -12,13 +12,13 @@ namespace Shorewind.Models.OrderProductModels
         [Key]
         public int OrderProductId { get; set; }
 
-        [Required, Range(1, Int32.MaxValue)]
+        [Range(1, Int32.MaxValue)]
         public int OrderId { get; set; }
 
-        [Required, Range(1, Int32.MaxValue)]
+        [Range(1, Int32.MaxValue)]
         public int ProductId { get; set; }
 
-        [Required, Range(1, Int32.MaxValue, ErrorMessage = "Please enter atleast 1 for the product count")]
+        [Range(1, Int32.MaxValue, ErrorMessage = "Please enter atleast 1 for the product count")]
         public int ProductCount { get; set; }
 
     }

@@ -10,7 +10,6 @@
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "Shorewind.Data.ApplicationDbContext";
         }
 
         protected override void Seed(Shorewind.Data.ApplicationDbContext context)

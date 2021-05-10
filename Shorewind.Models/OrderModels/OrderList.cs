@@ -17,7 +17,7 @@ namespace Shorewind.Models.OrderModels
         public int ShipAddressId { get; set; }
         */
 
-        public Guid CustomerId { get; set; }
+        public int CustomerId { get; set; }
                
         public int EmployeeId { get; set; }
         

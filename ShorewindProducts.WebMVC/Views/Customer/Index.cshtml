@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Shorewind.Models.CustomerModels.CustomerList>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Customers</h2>
+@if (!Model.Any())
+            {
+                <p>We don't have any customers yet.</p>
+            }
+            else
+            {
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>Customer Last Name</th>
+                            <th>Customer First Name</th>
+                            <th>Created</th>
+                            <th>Modified</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (var customer in Model) 
+                    { 
+                        <tr>
+                            <td>@Html.ActionLink(customer.LastName, "Details", "Customer", new { id = customer.CustomerId }, null)</td>
+                            <td>@Html.ActionLink(customer.FirstName, "Details", "Customers", new { id = customer.CustomerId }, null)</td>
+                            <td>@customer.CreatedUtc</td>
+                            <td>@customer.ModifiedUtc</td>
+                        </tr>                   
+                    }
+
+                </tbody>
+                </table>
+            }

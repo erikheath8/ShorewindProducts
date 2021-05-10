@@ -57,7 +57,6 @@ C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProdu
 C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\ShorewindProducts.WebMVC\bin\EntityFramework.SqlServer.dll
 C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\ShorewindProducts.WebMVC\bin\Microsoft.AspNet.Identity.Core.dll
 C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\ShorewindProducts.WebMVC\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\ShorewindProducts.WebMVC\bin\Microsoft.AspNet.Identity.Owin.dll
 C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\ShorewindProducts.WebMVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\ShorewindProducts.WebMVC\bin\Microsoft.Owin.dll
 C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\ShorewindProducts.WebMVC\bin\Microsoft.Owin.Host.SystemWeb.dll
@@ -115,3 +114,9 @@ C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProdu
 C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\ShorewindProducts.WebMVC\obj\Debug\ShorewindProducts.WebMVC.dll
 C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\ShorewindProducts.WebMVC\obj\Debug\ShorewindProducts.WebMVC.pdb
 C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\ShorewindProducts.WebMVC\bin\Shorewind.Services.dll.config
+C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\ShorewindProducts.WebMVC\bin\System.Net.Http.Formatting.dll
+C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\ShorewindProducts.WebMVC\bin\System.Web.Http.dll
+C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\ShorewindProducts.WebMVC\bin\System.Web.Http.WebHost.dll
+C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\ShorewindProducts.WebMVC\bin\System.Net.Http.Formatting.xml
+C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\ShorewindProducts.WebMVC\bin\System.Web.Http.xml
+C:\Users\fzr60\Documents\projects\c#\elevenfifty\redBadge\project\ShorewindProducts\ShorewindProducts.WebMVC\bin\System.Web.Http.WebHost.xml
