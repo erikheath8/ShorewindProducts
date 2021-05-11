@@ -20,7 +20,6 @@ namespace ShorewindProducts.WebMVC.Controllers
         {
             var _userId = Guid.Parse(User.Identity.GetUserId());
             var customerService = new CustomerService(_userId);
-
             return customerService;
         }
 
@@ -111,20 +110,13 @@ namespace ShorewindProducts.WebMVC.Controllers
         // GET: Restaurant/Details/{id}
         public ActionResult Details(int id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-
             var service = CreateService();
             var customer = service.GetCustomerById(id);
            
-            if (customer == null)
-            {
-                return HttpNotFound();
-            }
             return View(customer);
         }
+
+
 
     }
 }

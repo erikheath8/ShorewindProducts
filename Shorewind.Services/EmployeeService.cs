@@ -10,6 +10,11 @@ namespace Shorewind.Services
 {
     public class EmployeeService
     {
+        private readonly Guid _userId;
+        public EmployeeService(Guid userId)
+        {
+            _userId = userId;
+        }
 
         public bool CreateEmployee(EmployeeCreate model)
         {
