@@ -8,7 +8,6 @@ namespace Shorewind.Models.OrderModels
 {
     public class OrderEdit
     {
-        // Class added for conformity to good practice standards
 
     }
 }

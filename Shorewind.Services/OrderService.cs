@@ -11,6 +11,12 @@ namespace Shorewind.Services
 {
     public class OrderService
     {
+        private readonly Guid _userId;
+        public OrderService(Guid userId)
+        {
+            _userId = userId;
+        }
+
         public string CreateOrder(int customerId)
         {
             var entity =
@@ -30,25 +36,22 @@ namespace Shorewind.Services
             }
         }
 
-        public IEnumerable<OrderList> GetOrders(int customerId) 
+        public IEnumerable<Orders> GetOrders() 
         {
 
             using (var ctx = new ApplicationDbContext())
             {
                 var orders =
                     ctx
-                    .Orders
-                    .Where(e => e.CustomerId == customerId).ToList();
+                    .Orders.ToList();
 
-                List<OrderList> newList = new List<OrderList>();
+                List<Orders> newList = new List<Orders>();
 
                 foreach (var q in orders)
                 {
-                    var ordersList = new OrderList
+                    var ordersList = new Orders
                     {
                         OrderId = q.OrderId,
-                        CustomerId = q.CustomerId,
-                        OrderProducts = ListItemConverter(q.OrderProducts),
                         CreatedOrderDate = q.CreatedOrderDate,
                         IsOrderShipped = q.IsOrderShipped
                     };
@@ -77,6 +80,7 @@ namespace Shorewind.Services
                         CustomerId = entity.CustomerId,
                         OrderProducts = ListItemConverter(entity.OrderProducts),
                         CreatedOrderDate = entity.CreatedOrderDate,
+                        //TotalCost = entity.TotalCost,
                         IsOrderShipped = entity.IsOrderShipped
                     };
             }
@@ -98,8 +102,6 @@ namespace Shorewind.Services
                         CustomerId = entity.CustomerId,
                         Customer = entity.Customer,
                         Employee = entity.Employee,
-                        CreatedOrderDate = entity.CreatedOrderDate,
-                        IsOrderShipped = entity.IsOrderShipped,
                         OrderProducts = entity.OrderProducts.Select(e => new OrderProductList()
                         {
                             OrderProductId = e.Product.ProductId,
@@ -108,9 +110,11 @@ namespace Shorewind.Services
                             ProductCount = e.ProductCount,
                             UnitPrice = e.Product.UnitPrice
 
-                        }).ToList()
-                       
-                    };
+                        }).ToList(),
+                        //TotalCost = entity.TotalCost,
+                        CreatedOrderDate = entity.CreatedOrderDate,
+                        IsOrderShipped = entity.IsOrderShipped
+                };
             }
         }
 

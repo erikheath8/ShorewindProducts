@@ -12,8 +12,6 @@ namespace ShorewindProducts.WebMVC.Controllers
 {
     public class ProductController : Controller
     {
-        private ApplicationDbContext _db = new ApplicationDbContext();
-
         private ProductService CreateService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
@@ -25,7 +23,7 @@ namespace ShorewindProducts.WebMVC.Controllers
         public ActionResult Index()
         {
             var products = CreateService().GetProducts();
-            return View();
+            return View(products);
         }
 
         // POST: Customer/Create

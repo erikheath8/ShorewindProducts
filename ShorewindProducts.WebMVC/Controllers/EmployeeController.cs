@@ -52,7 +52,7 @@ namespace ShorewindProducts.WebMVC.Controllers
 
             ModelState.AddModelError("", "Employee could not be created.");
 
-            return RedirectToAction("EmployeeList");
+            return RedirectToAction("Index");
         }
 
         // Get: Customer/Delete/{id}

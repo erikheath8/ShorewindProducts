@@ -50,8 +50,8 @@ namespace Shorewind.Services
                         ProductDescription = e.ProductDescription,
                         CategoryId = e.CategoryId,
                         StockQuantity = e.StockQuantity,
-                        UnitPrice = e.UnitPrice
-
+                        UnitPrice = e.UnitPrice,
+                        
                     });
 
                 return query.ToArray();

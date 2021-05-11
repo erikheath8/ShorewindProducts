@@ -29,12 +29,14 @@
         <th>
             @Html.DisplayNameFor(model => model.UnitPrice)
         </th>
+  @*  
         <th>
             @Html.DisplayNameFor(model => model.CreatedUtc)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.ModifiedUtc)
         </th>
+  *@      
         <th></th>
     </tr>
 
@@ -58,16 +60,18 @@
         <td>
             @Html.DisplayFor(modelItem => item.UnitPrice)
         </td>
+   @*
         <td>
             @Html.DisplayFor(modelItem => item.CreatedUtc)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.ModifiedUtc)
         </td>
+    *@
         <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            @Html.ActionLink("Edit", "Edit", new { id=item.ProductId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ProductId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ProductId })
         </td>
     </tr>
 }

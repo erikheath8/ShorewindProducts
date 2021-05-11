@@ -27,10 +27,12 @@ namespace Shorewind.Models.ProductModels
         [Display(Name = "Product Price")]
         public double UnitPrice { get; set; }
 
+        /*
         [Display(Name = "Created")]
         public DateTimeOffset CreatedUtc { get; set; }
 
         [Display(Name = "Modified")]
         public DateTimeOffset? ModifiedUtc { get; set; }
+        */
     }
 }

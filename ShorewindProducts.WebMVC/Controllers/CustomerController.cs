@@ -14,8 +14,6 @@ namespace ShorewindProducts.WebMVC.Controllers
 {
     public class CustomerController : Controller
     {
-        private ApplicationDbContext _db = new ApplicationDbContext();
-
         private CustomerService CreateService()
         {
             var _userId = Guid.Parse(User.Identity.GetUserId());

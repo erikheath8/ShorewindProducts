@@ -20,11 +20,10 @@ namespace Shorewind.Models.OrderModels
         public int CustomerId { get; set; }
                
         public int EmployeeId { get; set; }
-        
-        public DateTimeOffset CreatedOrderDate { get; set; }
 
         public virtual List<OrderProductList> OrderProducts { get; set; } = new List<OrderProductList>();
 
+        /*
         public double TotalCost
         {
 
@@ -41,7 +40,12 @@ namespace Shorewind.Models.OrderModels
                 return OrderProducts.Count > 0 ? cost : 0;
 
             }
+
+            set {}
         }
+        */
+
+        public DateTimeOffset CreatedOrderDate { get; set; }
 
         public bool IsOrderShipped { get; set; }
 

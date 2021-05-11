@@ -118,6 +118,7 @@
     <Compile Include="OrderModels\OrderDetail.cs" />
     <Compile Include="OrderModels\OrderEdit.cs" />
     <Compile Include="OrderModels\OrderList.cs" />
+    <Compile Include="OrderModels\Orders.cs" />
     <Compile Include="OrderProductModels\OrderProductCreate.cs" />
     <Compile Include="OrderProductModels\OrderProductDetail.cs" />
     <Compile Include="OrderProductModels\OrderProductEdit.cs" />
